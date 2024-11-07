@@ -1,0 +1,35 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 2,
+ start_date = '2017-06-17_00:00:00', '2017-06-17_00:00:00', 
+ end_date   = '2017-06-17_23:00:00', '2017-06-17_23:00:00',  
+ interval_seconds = 3600,
+ io_form_geogrid = 2,
+/
+&geogrid
+ parent_id         =   1, 1, 
+ parent_grid_ratio =   1, 10,  
+ i_parent_start    =   1, 134,  
+ j_parent_start    =   1, 134,  
+ e_we              =  299, 301,  
+ e_sn              =  299, 301,  
+ geog_data_res     = 'high_res_landfill', 'high_res_landfill', 
+ dx                = 300,
+ dy                = 300,
+ map_proj          = 'lambert',
+ ref_lat           =  38.5150,
+ ref_lon           = -121.1921,
+ truelat1          =  38.5150
+ truelat2          =  38.5150,
+ stand_lon         = -121.1921,
+ geog_data_path    = '/global/scratch/users/melius/WPS_landfill/',
+ !geog_data_path    = '/global/home/users/hgamarro/scratch/WPS_GEOG/',
+/
+&ungrib
+ out_format = 'WPS',
+ prefix     = 'FILE',
+/
+&metgrid
+ fg_name         = 'FILE'
+ io_form_metgrid = 2,
+/
